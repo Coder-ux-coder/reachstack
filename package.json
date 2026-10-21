@@ -1,0 +1,35 @@
+{
+  "name": "reachstack",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Self-hosted cold email outreach: mailboxes and warmup, campaigns, a shared inbox, CRM, Lead Finder, AI agents and automations.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Coder-ux-coder/reachstack.git"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n server,web -c blue,magenta \"npm run dev -w @reachstack/server\" \"npm run dev -w @reachstack/web\"",
+    "build": "npm run build -w @reachstack/web",
+    "start": "npm run start -w @reachstack/server",
+    "local": "node tools/start-local.mjs",
+    "typecheck": "npm run typecheck -w @reachstack/server && npm run typecheck -w @reachstack/web",
+    "test": "npm run test -w @reachstack/server",
+    "db:generate": "npm run db:generate -w @reachstack/server",
+    "owner": "npm run owner -w @reachstack/server --",
+    "api-key": "npm run api-key -w @reachstack/server --",
+    "seed:demo": "npm run seed:demo -w @reachstack/server --"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "typescript": "~5.9.3"
+  },
+  "engines": {
+    "node": ">=22.12"
+  }
+}

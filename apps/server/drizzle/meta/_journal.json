@@ -1,0 +1,279 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1791728666769,
+      "tag": "0000_init",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1791731091221,
+      "tag": "0001_sandbox_and_warmup_replies",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1791734030110,
+      "tag": "0002_placement_seeds",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1791802479658,
+      "tag": "0003_platform_tables",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1791803667618,
+      "tag": "0004_lead_finder_ai_usage",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1791806840248,
+      "tag": "0005_ai_agents",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "6",
+      "when": 1791819064969,
+      "tag": "0006_deliverability_activity_fields",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "6",
+      "when": 1791874351440,
+      "tag": "0007_crm",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "6",
+      "when": 1791878039819,
+      "tag": "0008_copilot",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "6",
+      "when": 1791878290204,
+      "tag": "0009_copilot_sharing",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "6",
+      "when": 1791895141066,
+      "tag": "0010_website_visitors",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "6",
+      "when": 1791982098273,
+      "tag": "0011_automations",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "6",
+      "when": 1791990592949,
+      "tag": "0012_privacy_center",
+      "breakpoints": true
+    },
+    {
+      "idx": 13,
+      "version": "6",
+      "when": 1791999226480,
+      "tag": "0013_owner_access",
+      "breakpoints": true
+    },
+    {
+      "idx": 14,
+      "version": "6",
+      "when": 1792029197088,
+      "tag": "0014_bounce_detail",
+      "breakpoints": true
+    },
+    {
+      "idx": 15,
+      "version": "6",
+      "when": 1792032691104,
+      "tag": "0015_send_errors",
+      "breakpoints": true
+    },
+    {
+      "idx": 16,
+      "version": "6",
+      "when": 1792033051556,
+      "tag": "0016_reminder_index",
+      "breakpoints": true
+    },
+    {
+      "idx": 17,
+      "version": "6",
+      "when": 1792068703826,
+      "tag": "0017_recently_deleted",
+      "breakpoints": true
+    },
+    {
+      "idx": 18,
+      "version": "6",
+      "when": 1792074039578,
+      "tag": "0018_lead_timezone",
+      "breakpoints": true
+    },
+    {
+      "idx": 19,
+      "version": "6",
+      "when": 1792081743916,
+      "tag": "0019_domain_checks",
+      "breakpoints": true
+    },
+    {
+      "idx": 20,
+      "version": "6",
+      "when": 1792093795702,
+      "tag": "0020_job_inputs",
+      "breakpoints": true
+    },
+    {
+      "idx": 21,
+      "version": "6",
+      "when": 1792103497943,
+      "tag": "0021_event_attribution",
+      "breakpoints": true
+    },
+    {
+      "idx": 22,
+      "version": "6",
+      "when": 1792152919850,
+      "tag": "0022_sequence_tasks",
+      "breakpoints": true
+    },
+    {
+      "idx": 23,
+      "version": "6",
+      "when": 1792163503073,
+      "tag": "0023_inbox_retry",
+      "breakpoints": true
+    },
+    {
+      "idx": 24,
+      "version": "6",
+      "when": 1792172478490,
+      "tag": "0024_warmup_address",
+      "breakpoints": true
+    },
+    {
+      "idx": 25,
+      "version": "6",
+      "when": 1792174784015,
+      "tag": "0025_visitor_lookup",
+      "breakpoints": true
+    },
+    {
+      "idx": 26,
+      "version": "6",
+      "when": 1792177603231,
+      "tag": "0026_agent_deciding",
+      "breakpoints": true
+    },
+    {
+      "idx": 27,
+      "version": "6",
+      "when": 1792180621971,
+      "tag": "0027_placement_sending",
+      "breakpoints": true
+    },
+    {
+      "idx": 28,
+      "version": "6",
+      "when": 1792182139230,
+      "tag": "0028_interest_synced",
+      "breakpoints": true
+    },
+    {
+      "idx": 29,
+      "version": "6",
+      "when": 1792183200429,
+      "tag": "0029_copilot_task_day",
+      "breakpoints": true
+    },
+    {
+      "idx": 30,
+      "version": "6",
+      "when": 1792185192058,
+      "tag": "0030_deleted_moved_at",
+      "breakpoints": true
+    },
+    {
+      "idx": 31,
+      "version": "6",
+      "when": 1792188637444,
+      "tag": "0031_access_rights",
+      "breakpoints": true
+    },
+    {
+      "idx": 32,
+      "version": "6",
+      "when": 1792194741497,
+      "tag": "0032_sales_agent_links",
+      "breakpoints": true
+    },
+    {
+      "idx": 33,
+      "version": "6",
+      "when": 1792199666756,
+      "tag": "0033_automation_retry_attempts",
+      "breakpoints": true
+    },
+    {
+      "idx": 34,
+      "version": "6",
+      "when": 1792201423204,
+      "tag": "0034_lead_suppressions",
+      "breakpoints": true
+    },
+    {
+      "idx": 35,
+      "version": "6",
+      "when": 1792202209203,
+      "tag": "0035_job_input_parts",
+      "breakpoints": true
+    },
+    {
+      "idx": 36,
+      "version": "6",
+      "when": 1792208382992,
+      "tag": "0036_lead_verify_run",
+      "breakpoints": true
+    },
+    {
+      "idx": 37,
+      "version": "6",
+      "when": 1792220850514,
+      "tag": "0037_refused_tries",
+      "breakpoints": true
+    },
+    {
+      "idx": 38,
+      "version": "6",
+      "when": 1792589888136,
+      "tag": "0038_agent_pass_claim",
+      "breakpoints": true
+    }
+  ]
+}

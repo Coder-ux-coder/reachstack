@@ -1,0 +1,1 @@
+CREATE INDEX `emails_reminder_idx` ON `emails` (`reminder_ts`);

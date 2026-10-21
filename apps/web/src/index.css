@@ -1,0 +1,259 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Semantic tokens; components use these (bg-panel, text-muted, border-line, bg-brand …). Text colours keep at least
+   4.5:1 against the panels and soft fills they sit on, and white keeps 4.5:1 on the brand and bad-fill fills. */
+:root {
+  --bg: #f7f7f9;
+  --panel: #ffffff;
+  --panel-2: #f2f3f6;
+  --line: #e4e5eb;
+  --line-strong: #d3d5de;
+  --text: #15161c;
+  --muted: #5c5f70;
+  --faint: #696c7d;
+  --brand: #4f46e5;
+  --brand-hover: #4338ca;
+  --brand-soft: #eef0ff;
+  --brand-text: #3b34c4;
+  /* Text on brand fills: white, or dark text on a light custom brand colour (lib/theme.ts). */
+  --on-brand: #ffffff;
+  --ok: #15803d;
+  --ok-soft: #e9f8ef;
+  --warn: #b45309;
+  --warn-soft: #fff6e6;
+  --bad: #c81e1e;
+  --bad-soft: #fdecec;
+  --bad-fill: #c81e1e;
+  --info: #0369a1;
+  --info-soft: #e8f4fb;
+  --ring: rgb(79 70 229 / 0.35);
+  --shadow: 0 1px 2px rgb(16 18 27 / 0.06), 0 1px 3px rgb(16 18 27 / 0.04);
+}
+
+.dark {
+  --bg: #0e0f13;
+  --panel: #16171d;
+  --panel-2: #1d1f27;
+  --line: #2a2c36;
+  --line-strong: #383b48;
+  --text: #ececf1;
+  --muted: #a0a3b4;
+  --faint: #858899;
+  --brand: #655cec;
+  --brand-hover: #5d55e6;
+  --brand-soft: #23214a;
+  --brand-text: #aaa4ff;
+  --ok: #34d399;
+  --ok-soft: #10291f;
+  --warn: #fbbf24;
+  --warn-soft: #2d2410;
+  --bad: #f87171;
+  --bad-soft: #321616;
+  /* Danger buttons: --bad is a light red in the dark theme, too light under white text. */
+  --bad-fill: #dc2626;
+  --info: #38bdf8;
+  --info-soft: #0f2533;
+  --ring: rgb(124 116 245 / 0.45);
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.4);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-panel: var(--panel);
+  --color-panel-2: var(--panel-2);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-soft: var(--brand-soft);
+  --color-brand-text: var(--brand-text);
+  --color-on-brand: var(--on-brand);
+  --color-ok: var(--ok);
+  --color-ok-soft: var(--ok-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-bad: var(--bad);
+  --color-bad-soft: var(--bad-soft);
+  --color-bad-fill: var(--bad-fill);
+  --color-info: var(--info);
+  --color-info-soft: var(--info-soft);
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --shadow-card: var(--shadow);
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+  }
+  * {
+    border-color: var(--line);
+  }
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 1px;
+  }
+  ::selection {
+    background: var(--brand-soft);
+  }
+  input,
+  textarea,
+  select,
+  button {
+    font: inherit;
+    color: inherit;
+  }
+  /* A grid with columns only from a breakpoint up (sm:grid-cols-2 …) has one column below it; sized "auto", long
+     content such as an email address or a wide table stretched it past the screen. grid-cols-* still win. */
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@layer components {
+  .scroll-thin {
+    scrollbar-width: thin;
+    scrollbar-color: var(--line-strong) transparent;
+  }
+  /* Tab strips scroll sideways on small screens without showing a bar. */
+  .scroll-none {
+    scrollbar-width: none;
+  }
+  .scroll-none::-webkit-scrollbar {
+    display: none;
+  }
+  /* Email bodies and rich text rendered from HTML. */
+  .prose-mail {
+    line-height: 1.55;
+    word-break: break-word;
+  }
+  .prose-mail p {
+    margin: 0 0 0.75em;
+  }
+  .prose-mail a {
+    color: var(--brand-text);
+    text-decoration: underline;
+  }
+  .prose-mail blockquote,
+  .prose-mail .rs-quote {
+    border-left: 3px solid var(--line-strong);
+    margin: 0.75em 0;
+    padding-left: 0.75em;
+    color: var(--muted);
+  }
+  .prose-mail img {
+    max-width: 100%;
+  }
+  .prose-mail ul {
+    list-style: disc;
+    padding-left: 1.4em;
+  }
+  .prose-mail ol {
+    list-style: decimal;
+    padding-left: 1.4em;
+  }
+  .tiptap {
+    outline: none;
+    min-height: 220px;
+  }
+  .tiptap p.is-editor-empty:first-child::before {
+    content: attr(data-placeholder);
+    color: var(--faint);
+    float: left;
+    height: 0;
+    pointer-events: none;
+  }
+  .var-chip {
+    background: var(--brand-soft);
+    color: var(--brand-text);
+    border-radius: 4px;
+    padding: 0 3px;
+  }
+}
+
+/* A small icon button (a chip's ×) gets a 24px tap area centred on it, without changing its size. */
+@utility hit-24 {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 24px;
+    height: 24px;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes rs-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.animate-in {
+  animation: rs-fade-in 0.14s ease-out;
+}
+
+/* "Working…" labels while the copilot runs a step. */
+@keyframes rs-shimmer {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+.shimmer-text {
+  background: linear-gradient(90deg, var(--muted) 30%, var(--text) 50%, var(--muted) 70%) 0 0 / 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rs-shimmer 1.6s linear infinite;
+}
+/* Blinking caret at the end of a streaming answer. */
+@keyframes rs-caret {
+  50% {
+    opacity: 0;
+  }
+}
+.stream-caret > :last-child::after {
+  content: "";
+  display: inline-block;
+  width: 0.45em;
+  height: 1em;
+  margin-left: 2px;
+  vertical-align: -0.12em;
+  border-radius: 1px;
+  background: var(--brand);
+  animation: rs-caret 1s steps(1) infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .shimmer-text {
+    animation: none;
+    color: var(--muted);
+    background: none;
+  }
+  .stream-caret > :last-child::after {
+    animation: none;
+  }
+}

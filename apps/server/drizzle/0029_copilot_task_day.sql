@@ -1,0 +1,1 @@
+ALTER TABLE `copilot_tasks` ADD `day_of_month` integer;

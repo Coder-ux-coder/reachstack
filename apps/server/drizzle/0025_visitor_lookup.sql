@@ -1,0 +1,1 @@
+ALTER TABLE `visitor_sessions` ADD `lookup_at` integer;

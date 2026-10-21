@@ -1,0 +1,6 @@
+# Keep LF line endings in the working tree on every machine (project convention),
+# whatever core.autocrlf is set to. Binary files are detected and left alone.
+* text=auto eol=lf
+# Windows batch files need CRLF to run reliably.
+*.cmd text eol=crlf
+*.bat text eol=crlf

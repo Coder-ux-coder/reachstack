@@ -1,0 +1,10 @@
+node_modules/
+dist/
+data/
+.env
+.recon/
+*.log
+.DS_Store
+coverage/
+# Session cookies saved by tools/dev scripts
+tools/dev/.*cookies

@@ -1,0 +1,1 @@
+ALTER TABLE `copilot_threads` ADD `shared` integer DEFAULT false NOT NULL;

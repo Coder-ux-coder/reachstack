@@ -1,0 +1,1 @@
+ALTER TABLE `ai_sales_agents` ADD `deciding_until` integer;

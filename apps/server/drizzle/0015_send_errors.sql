@@ -1,0 +1,1 @@
+ALTER TABLE `account_daily_stats` ADD `send_errors` integer DEFAULT 0 NOT NULL;
