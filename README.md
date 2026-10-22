@@ -4,6 +4,13 @@
 reply from one inbox, on your own computer or your own server. No subscription and no per-seat pricing, and your
 data stays with you.
 
+> [!NOTE]
+> **Reachstack is new.** It's checked by hundreds of automated tests and a fresh start on Linux, macOS and Windows,
+> all with test mailboxes and stand-ins for outside services. Sending through real Gmail and Outlook mailboxes, Google
+> and Microsoft sign-in, Stripe, Twilio and the AI features with a real AI haven't been used in the wild yet: start
+> with one or two mailboxes and low daily limits, and [open an issue](https://github.com/Coder-ux-coder/reachstack/issues)
+> when something isn't right.
+
 ![Reachstack's home page: replies, campaigns and mailbox health at a glance](docs/images/dashboard.png)
 
 ## What it does
